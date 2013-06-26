@@ -1,0 +1,30 @@
+/* moved here to avoid scss error */
+
+/* from screen.min.css */
+html.js* .cl1 .filter .wrap {
+    height: 31px;
+}
+
+
+/* from widgets.min.css */
+html.js* .w13>.wrap>article .info .w49 .comments {
+    display: inline;
+    zoom: 1;
+}
+html.js* .w13>.wrap>article .info .w49 .comments+.buttons, html.js* .w13>.wrap>article .info .w49 .comments+.htmlShareButtons {
+    display: inline;
+    zoom: 1;
+}
+html.js* .w14>.wrap>article .wrap {
+    height: 115px;
+}
+
+html.js* .w14>.wrap>article .wrap h4 {
+    height: 115px;
+}
+*html.js .w80 {
+    display: none!important;
+}
+html.js* .cl1 .filter .wrap {
+    height: 31px;
+}
