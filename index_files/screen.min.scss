@@ -1,3 +1,4 @@
+@import "helpers";
 @import "variables";
 
 /*!
@@ -3611,9 +3612,4 @@ html* .cl1 .nav>ul li.step a {
 }
 .js .weather-box {
     display: none;
-}
-
-// Styles for this selector are also hardcoded in the index.html <head>
-.w4.on > .login > .wrap {
-  background: $color-grey-light url(img/w4-shadow-a.png) repeat-x;
 }

@@ -1,3 +1,4 @@
+@import "helpers";
 @import "variables";
 
 .w25>ul.tabs {
@@ -406,26 +407,59 @@ html* .w3 p {
 .w4>.bar>.wrap {
     position: relative;
     width: 100%}
+
+// <div> Holds main navigation, top left.
 .w4>.bar>.wrap>.left {
-    float: left;
     margin: 0;
+    
+    @media only screen and (min-width: $break-medium) {
+      float: left;
+    }
 }
 .w4>.bar>.wrap>.right {
-    float: right;
     margin: 0;
+    
+    @media only screen and (min-width: $break-medium) {
+      float: right;
+    }
+    
+    // on smaller screens move social icons right
+    & > ul:first-child {
+      
+      @media only screen and (max-width: $break-medium-max) {
+        float: right;
+      }
+    }
 }
 .w4>.bar ul {
-    float: left;
     list-style: none;
     margin: 0;
     padding: 0;
+    text-align: center;
+    
+    @media only screen and (min-width: $break-medium) {
+      float: left;
+      text-align: left;
+    }
+    
+    &.registration-header-bar-element {
+      
+      @media only screen and (max-width: $break-medium-max) {
+        float: left;
+      }
+    }
 }
 .w4>.bar ul li {
+    @include inline-block;
     position: relative;
-    float: left;
     font-size: 1.1em;
     line-height: 26px;
     text-transform: uppercase;
+    
+    @media only screen and (min-width: $break-medium) {
+      display: block;
+      float: left;
+    }
 }
 .w4>.bar ul.regular li {
     text-transform: none;
@@ -434,10 +468,15 @@ html* .w3 p {
     margin-left: 0;
 }
 .w4>.bar ul li a {
-    float: left;
+    @include inline-block;
     padding: 0 10px;
     color: #fff;
     text-decoration: none;
+    
+    @media only screen and (min-width: $break-medium) {
+      display: block;
+      float: left;
+    }
 }
 .w4>.bar ul li a:hover, .w4>.bar ul li a:focus, .w4>.bar ul li a:active {
     background-color: #d8d9d9;
@@ -559,7 +598,10 @@ html* .w3 p {
     font-weight: bold;
 }
 .w4>.bar .right li ~ li, .w4>.bar .right ul ~ ul li {
-    border-left: 1px solid #fff;
+    
+    @media only screen and (min-width: $break-medium) {
+      border-left: 1px solid #fff;
+    }
 }
 .w4>.bar .right li a:hover, .w4>.bar .right li a:focus, .w4>.bar .right li a:active {
     background: #5f6265;
@@ -621,6 +663,7 @@ html* .w3 p {
     vertical-align: 2px;
 }
 .w4>.login {
+    //@include group;
     position: relative;
     z-index: 521;
     width: 100%;
