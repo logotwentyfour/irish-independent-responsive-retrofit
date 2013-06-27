@@ -1365,7 +1365,6 @@ html* .w47>.three>.right>p {
     
     @media only screen and (min-width: $break-small) {
       max-width: none;
-      padding-right: 0;
       width: auto;
     }
     
@@ -1397,12 +1396,6 @@ html* .w47>.three>.right>p {
 }
 .lt-ie9 .w5>.wrap>div>ul>li>div.row-a {
     border-bottom: 3px solid #ddd;
-}
-.w5>.wrap>div>ul>li>div>.column ~ .column {
-    
-    @media only screen and (min-width: $break-small) {
-      margin-left: 15px;
-    }
 }
 .w5 .right {
     float: right;
@@ -2908,9 +2901,6 @@ html* .w16>.thumbs.one>.wrap>ul {
     width: 100%;
     margin: 0 0 15px;
 }
-.w18 article.image {
-    height: 90px;
-}
 .w18 article+article {
     margin-top: -8px;
     padding-top: 7px;
@@ -2923,14 +2913,15 @@ html* .w16>.thumbs.one>.wrap>ul {
     text-decoration: none;
 }
 .w18 article a>div {
-    display: table-cell;
     width: 100%;
-    height: 37px;
     margin: 0;
-    vertical-align: middle;
+    
+    @media only screen and (min-width: $break-medium) {
+      display: table-cell;
+      vertical-align: middle;
+    }
 }
 .w18 article.image a>div {
-    height: 80px;
     padding: 5px 0;
 }
 .w18 article.mha a>div {
@@ -2984,12 +2975,10 @@ html* .w16>.thumbs.one>.wrap>ul {
     margin-left: -20px;
 }
 .w18 article figure {
-    display: table-cell;
     position: relative;
     width: 90px;
     margin: 0;
     padding-right: 20px;
-    vertical-align: middle;
 }
 .w18 article figure {
     box-sizing: padding-box;
@@ -3004,8 +2993,14 @@ html* .w16>.thumbs.one>.wrap>ul {
     display: block;
     position: relative;
     width: 100%}
+    
 .w18 article figure img {
     display: block;
+    margin: 0 auto;
+    
+    @media only screen and (min-width: $break-medium) {
+      margin: 0;
+    }
 }
 html* .w18 article a {
     display: block;
