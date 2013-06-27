@@ -426,7 +426,7 @@ html* .w3 p {
     // on smaller screens move social icons right
     & > ul:first-child {
       
-      @media only screen and (max-width: $break-medium-max) {
+      @media only screen and (max-width: $break-medium-max) and (min-width: $break-small) {
         float: right;
       }
     }
@@ -435,7 +435,6 @@ html* .w3 p {
     list-style: none;
     margin: 0;
     padding: 0;
-    text-align: center;
     
     @media only screen and (min-width: $break-medium) {
       float: left;
@@ -592,7 +591,10 @@ html* .w3 p {
     padding: 0;
 }
 .w4>.bar .right .icons.twitter {
-    margin-right: 10px;
+    
+    @media only screen and (min-width: $break-small) {
+      margin-right: 10px;
+    }
 }
 .w4>.bar .right li {
     font-weight: bold;
@@ -635,6 +637,10 @@ html* .w3 p {
 .w4>.bar .right li.icons.googleplus a {
     width: 16px;
     background-position: -33px 0;
+    
+    @media only screen and (max-width: $break-small-max) {
+      margin-left: 9px;
+    }
 }
 .w4>.bar .right li.icons a:hover {
     opacity: .8;
@@ -695,6 +701,10 @@ html* .w3 p {
 }
 .w4.on>.login>.wrap {
     height: auto!important;
+    
+    background: #5F6265;
+    padding: 0 10px;
+    box-sizing: border-box;
 }
 .w4>.login>.wrap:after {
     display: block;
