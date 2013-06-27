@@ -1962,7 +1962,7 @@ html* .w47 > .three > .right > p {
 
 /* line 1381, widgets.min.scss */
 .w5 .right .w6 {
-  margin: 8px 7px 0;
+  margin: 8px 7px !important;
 }
 
 /* line 1384, widgets.min.scss */

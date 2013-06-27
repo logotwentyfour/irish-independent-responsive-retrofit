@@ -1379,7 +1379,7 @@ html* .w47>.three>.right>p {
     margin: 0;
 }
 .w5 .right .w6 {
-    margin: 8px 7px 0;
+    margin: 8px 7px !important; // !important to override :last-child selector
 }
 .blue .w5>.wrap>div>ul>li>a:hover, .blue .w5>.wrap>div>ul>li>a:focus, .blue .w5>.wrap>div>ul>li>a:active, .blue .w5>.wrap>div>ul>li:hover>a, .blue .w5>.wrap>div>ul>li>a.active {
     background-color: #3e70a2;
