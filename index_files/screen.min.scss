@@ -53,6 +53,16 @@ div, form, blockquote, article, aside, details, figcaption, figure, footer, head
     position: relative;
     z-index: 500;
     margin: 0 0 20px;
+    
+    // add bottom border to top left menu at small sizes to visually separate
+    // menus
+    & > .w4 > .bar > .wrap > .left {
+      border-bottom: 1px solid #fff;
+      
+      @media only screen and (min-width: $break-medium) {
+        border-bottom: none;
+      }
+    }
 }
 #top>.advert {
     position: relative;

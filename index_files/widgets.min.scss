@@ -709,13 +709,13 @@ html* .w3 p {
     float: left;
     margin: 0;
     padding: 20px 0 25px;
-    width: 600px;
+    max-width: 600px;
 }
 .w4>.login>.wrap>.right {
     float: right;
     margin: 0;
     padding: 20px 0 25px;
-    width: 110px;
+    max-width: 110px;
 }
 .w4>.login h4 {
     margin: 0 0 10px;
@@ -726,12 +726,19 @@ html* .w3 p {
 }
 .w4>.login p {
     position: relative;
-    float: left;
-    margin: 0;
     line-height: 31px;
+    margin-bottom: 10px;
+    
+    @media only screen and (min-width: $break-small) {
+      float: left;
+      margin: 0;
+    }
 }
 .w4>.login p ~ p {
-    margin-left: 10px;
+    
+    @media only screen and (min-width: $break-small) {
+      margin-left: 10px;
+    }
 }
 .w4>.login p.error {
     position: absolute;
