@@ -1072,8 +1072,13 @@ html* .w3 p {
     height: 0;
 }
 .w47>.one>.left {
-    float: left;
-    margin: 0;
+    @include group;
+    margin-bottom: 20px;
+    
+    @media only screen and (min-width: $break-large) {
+      float: left;
+      margin: 0;
+    }
 }
 .w47>.one>.left>ul {
     float: left;
@@ -1087,9 +1092,26 @@ html* .w3 p {
     font-size: 1.6em;
     line-height: 1;
     font-weight: bold;
+    
+    box-sizing: border-box;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    width: 50%;
+    
+    @media only screen and (min-width: $break-small) {
+      width: 33%;
+    }
+    
+    @media only screen and (min-width: $break-medium) {
+      margin-bottom: 0;
+      width: 25%;
+    }
 }
 .w47>.one>.left>ul>li ~ li {
-    margin-left: 20px;
+    
+    @media only screen and (min-width: $break-large) {
+      margin-left: 20px;
+    }
 }
 .w47>.one>.left>ul>li>a {
     float: left;
@@ -1138,9 +1160,12 @@ html* .w47>.one>.left>ul ~ ul li {
     background: 0;
 }
 .w47>.one>.right {
-    float: right;
-    width: 200px;
+    max-width: 200px;
     margin: 0;
+    
+    @media only screen and (min-width: $break-large) {
+      float: right;
+    }
 }
 .w47>.one>.right h3 {
     margin: 0;
@@ -1165,7 +1190,7 @@ html* .w47>.one>.left>ul ~ ul li {
 .w47>.one>.right ul li a {
     display: block;
     padding-left: 30px;
-    background: url(/img/footer-socials-a.png) no-repeat;
+    background: url(img/footer-socials-a.png) no-repeat;
     color: #c8c9ca;
     text-decoration: none;
 }
@@ -1191,23 +1216,39 @@ html* .w47>.one>.left>ul ~ ul li {
     line-height: 20px;
 }
 .w47>.two>.left {
-    float: left;
     margin: 0;
+    
+    @media only screen and (min-width: $break-large) {
+      float: left;
+    }
 }
 .w47>.two>.left>ul {
     float: left;
     list-style: none;
-    margin: 0;
+    margin: 0 0 0 -15px;
     padding: 0;
+    
+    @media only screen and (min-width: $break-large) {
+      margin: 0;
+    }
 }
 .w47>.two>.left>ul li {
     float: left;
     font-size: 1.2em;
     line-height: 20px;
     font-weight: bold;
+    
+    padding: 0 15px;
+    
+    @media only screen and (min-width: $break-large) {
+      padding: 0;
+    }
 }
 .w47>.two>.left>ul li ~ li {
-    margin-left: 35px;
+    
+    @media only screen and (min-width: $break-large) {
+      margin-left: 35px;
+    }
 }
 .w47>.two>.left>ul li a {
     color: #dedee0;
@@ -1217,8 +1258,11 @@ html* .w47>.one>.left>ul ~ ul li {
     color: #fff;
 }
 .w47>.two>.right {
-    float: right;
     margin: 0;
+    
+    @media only screen and (min-width: $break-large) {
+      float: right;
+    }
 }
 .w47>.two>.right>p {
     position: relative;
@@ -1267,7 +1311,6 @@ html* .w47>.one>.left>ul ~ ul li {
     line-height: 26px;
 }
 .w47>.three>.left {
-    float: left;
     margin: 0;
 }
 .w47>.three>.left>h1 {
@@ -1279,8 +1322,12 @@ html* .w47>.one>.left>ul ~ ul li {
     float: left;
 }
 .w47>.three>.right {
-    float: right;
-    margin: 0;
+    margin: 20px;
+    
+    @media only screen and (min-width: $break-large) {
+      float: right;
+      margin: 0;
+    }
 }
 .w47>.three>.right>p {
     float: right;
@@ -5213,8 +5260,15 @@ html* .w79 li span {
     margin-top: -25px;
 }
 .w6 {
+    float: left;
+    margin-top: 20px;
     position: relative;
     width: 195px;
+    
+    @media only screen and (min-width: $break-large) {
+      float: none;
+      margin-top: 0;
+    }
 }
 .w6 label {
     display: none;
