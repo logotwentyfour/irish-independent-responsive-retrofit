@@ -286,9 +286,13 @@ body.black {
     height: 0;
 }
 .row-a>.column {
-    float: left;
-    width: 300px;
-    margin: 0 0 0 20px;
+    width: auto;
+    
+    @media only screen and (min-width: $break-small) {
+      float: left;
+      margin: 0 0 0 20px;
+      width: 300px;
+    }
 }
 .row-a>.column:first-child {
     margin-left: 0;

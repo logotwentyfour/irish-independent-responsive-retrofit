@@ -1339,7 +1339,11 @@ html* .w47>.three>.right>p {
     color: #fff!important;
     text-decoration: none!important;
 }
-.w5>.wrap>div>ul>li>a:hover, .w5>.wrap>div>ul>li>a:focus, .w5>.wrap>div>ul>li>a:active, .w5>.wrap>div>ul>li:hover>a, .w5>.wrap>div>ul>li>a.active {
+.w5>.wrap>div>ul>li>a:hover,
+.w5>.wrap>div>ul>li>a:focus,
+.w5>.wrap>div>ul>li>a:active,
+.w5>.wrap>div>ul>li:hover>a,
+.w5>.wrap>div>ul>li>a.active {
     background-color: #5c8b3f;
 }
 .w5>.wrap>div>ul>li>em {
@@ -1348,16 +1352,27 @@ html* .w47>.three>.right>p {
     top: -10001px;
 }
 .w5>.wrap>div>ul>li>div {
+    box-sizing: border-box;
     display: none;
     position: absolute;
-    left: -16px;
-    right: -16px;
+    left: 0;
     top: 37px;
-    width: auto;
-    padding: 20px 0 20px 20px;
+    padding: 20px;
     border: 1px solid #d8dadb;
     background: #fff;
     font-weight: normal;
+    max-width: 290px;
+    
+    @media only screen and (min-width: $break-small) {
+      max-width: none;
+      padding-right: 0;
+      width: auto;
+    }
+    
+    @media only screen and (min-width: $break-large) {
+      left: -16px;
+      right: -16px;
+    }
 }
 .w5>.wrap>div>ul>li>div {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
@@ -1378,12 +1393,16 @@ html* .w47>.three>.right>p {
 }
 .w5>.wrap>div>ul>li:hover>div {
     display: block;
+    z-index: 1;
 }
 .lt-ie9 .w5>.wrap>div>ul>li>div.row-a {
     border-bottom: 3px solid #ddd;
 }
 .w5>.wrap>div>ul>li>div>.column ~ .column {
-    margin-left: 15px;
+    
+    @media only screen and (min-width: $break-small) {
+      margin-left: 15px;
+    }
 }
 .w5 .right {
     float: right;
@@ -3085,6 +3104,8 @@ html* .w18 article.image.empty div {
 }
 .w26 a figure img {
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 .w26 a .wrap {
     position: absolute;
